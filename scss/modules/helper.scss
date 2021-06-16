@@ -34,7 +34,8 @@
 
 .headline-1 {
   font-family: var(--sans-font);
-  font-size: 82px;
+  font-size: 86px;
+  line-height: 86px;
 
   @media (max-width: breakpoint-min('lg')) {
     font-size: 50px;
