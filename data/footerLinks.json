@@ -1,0 +1,42 @@
+[
+  {
+    "test": "GITHUB",
+    "url": "#",
+    "target": "_blank"
+  },
+  {
+    "test": "TWITTER",
+    "url": "#",
+    "target": "_blank"
+  },
+  {
+    "test": "DISCORD",
+    "url": "#",
+    "target": "_blank"
+  },
+  {
+    "test": "TELEGRAM",
+    "url": "#",
+    "target": "_blank"
+  },
+  {
+    "test": "DOCS",
+    "url": "#",
+    "target": "_blank"
+  },
+  {
+    "test": "FAQS",
+    "url": "#",
+    "target": "_blank"
+  },
+  {
+    "test": "JOBS",
+    "url": "#",
+    "target": "_blank"
+  },
+  {
+    "test": "BLOG",
+    "url": "#",
+    "target": "_blank"
+  }
+]

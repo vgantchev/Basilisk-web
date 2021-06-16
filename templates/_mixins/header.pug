@@ -1,0 +1,37 @@
+mixin header
+    - var active = (name) => templateName === name ? 'active' : ''
+    - var extractTemplateName = (url) => {if (url === '/') return 'index'; return url ? url.replace('/', '').replace('.html', '') : ''};
+
+    header.header.header-desktop.d-xl-flex
+        a.header__logo(href=url('/'))
+            img(src=url('/images/Logo-neon-dark-green-2.png'))
+        ul.header__menu
+            each item in header.menu
+                li
+                    a(href=url(item.url, locale) class=active(extractTemplateName(item.url)) target=item.target)=__(item.text)
+        .header__actions
+            - var currentLanguage = 'Eng'
+            ul.language-menu
+                each language, _locale in header.languages
+                    if _locale === locale
+                        - currentLanguage = language
+                    li
+                        a(href=url('/', _locale))=language
+                //li.d-xl-none
+                //    a.back(role='button') Back
+
+            div.language-selector
+                img.language-selector__global(src=url('/images/global.svg'))
+                span.language-selector__current=currentLanguage
+                img.language-selector__arrow-down(src=url('/images/arrow-down.svg'))
+
+
+            a.btn.btn-launch-app(href=header.launchAppUrl target='_blank')=__('launch App')
+
+    header.header-mobile.d-xl-none
+        div.header-mobile__hamberger(role='button')
+            div.header-mobile__hamberger-meat
+        div.header-mobile__main
+            a.header-mobile__logo(href=url('/', locale))
+                //img(src=url('/images/logo-hydradx-mobile.png'))
+

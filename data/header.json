@@ -1,0 +1,27 @@
+{
+  "menu": [
+    {
+      "text": "ABOUT",
+      "url": "/"
+    },
+    {
+      "text": "SUPPORT BASILISK",
+      "url": "/#",
+      "target": "_blank"
+    },
+    {
+      "text": "DOCS",
+      "url": "/#",
+      "target": "_blank"
+    },
+    {
+      "text": "HYDRATION",
+      "url": "/hydration.html"
+    }
+  ],
+  "languages": {
+    "en": "Eng",
+    "vi": "Vie"
+  },
+  "launchAppUrl": "/#"
+}

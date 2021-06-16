@@ -1,0 +1,264 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 5em;
+  align-items: center;
+
+  &__logo {
+    padding-top: 15px;
+    flex: 0 0 25%;
+    text-align: left;
+
+    img {
+      width: 210px;
+    }
+  }
+
+  &__actions {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    position: relative;
+  }
+
+  .language-selector {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    align-self: center;
+    margin-right: 2em;
+    border-bottom: 1px solid transparent;
+
+    &__global {
+      width: 21px;
+      position: relative;
+      top: 1px;
+    }
+
+    &__arrow-down {
+      width: 12px;
+    }
+
+    &__current {
+      padding: 0 0.8em;
+      text-transform: uppercase;
+    }
+
+    //&:hover {
+    //    border-bottom-color: var(--text-color);
+    //}
+  }
+
+  .language-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: 200px;
+
+    li {
+      padding: 5px;
+
+      a {
+        @extend .link-highlight-on-hover;
+      }
+    }
+  }
+
+  &__menu {
+    flex: 1 0 auto;
+    font-family: $sans-font;
+    margin: 20px 0;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+    text-transform: uppercase;
+
+    li {
+      display: inline-block;
+      margin: 10px 30px;
+
+      a {
+        @extend .link-highlight-on-hover;
+
+        &.active {
+          color: var(--primray-color);
+          border-bottom: 1px solid;
+        }
+      }
+    }
+  }
+
+  .btn-launch-app {
+    padding: 0.3em 0.5em 0.3em 1em;
+  }
+
+  .btn-launch-app:after {
+    content: '';
+    background-image: url("./images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 12px;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 22px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: breakpoint-min('xxl')) {
+    padding: 1em;
+
+    &__menu {
+      li {
+        margin: 10px 15px;
+      }
+    }
+
+    .language-selector {
+      margin-right: 1em;
+    }
+
+    .btn-launch-app {
+      padding: 0.3em 1em;
+    }
+  }
+
+  // Mobile menu
+  @media (max-width: breakpoint-max('xl')) {
+    display: none;
+    position: fixed;
+    background-color: var(--bgc);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-flow: column;
+    z-index: 10;
+    padding-top: 8em;
+
+    &__logo {
+      display: none;
+    }
+
+    &__menu {
+      height: calc(100% - 150px - 2em);
+      overflow-y: auto;
+
+      li {
+        display: block;
+        font-size: 28px;
+      }
+    }
+
+    &__actions {
+      flex-flow: column;
+      justify-content: center;
+      width: 100%;
+      height: 150px;
+    }
+
+    .btn-launch-app {
+      order: -1;
+      margin-bottom: 2em;
+      align-self: center;
+      order: -1;
+      width: 100%;
+      display: block;
+      text-align: center;
+      padding: 0.6em 1em;
+      max-width: 500px;
+
+      &:after {
+        content: '';
+        background-image: url("./images/arrow.svg");
+      }
+    }
+  }
+
+  @media (max-width: breakpoint-min('sm')) {
+    padding-top: 7em;
+
+    &__menu {
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
+
+.header-mobile {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+
+  $self: &;
+
+  &.open {
+    width: 100%;
+
+    #{$self}__hamberger-meat {
+      opacity: 0;
+    }
+
+    #{$self}__hamberger:before {
+      transform: rotate(40deg) translate(6px, 7px);
+    }
+
+    #{$self}__hamberger:after {
+      transform: rotate(-40deg) translate(4px, -5px);
+    }
+  }
+
+  &__hamberger {
+    flex: 0 0 25px;
+    font-size: 0;
+    display: block;
+    padding: 3px;
+
+    &:before, &:after, &-meat {
+      content: '';
+      display: inline-block;
+      width: 25px;
+      height: 2px;
+      background-color: var(--text-color);
+      border-radius: 2px;
+      transition: 0.3s;
+      box-shadow: 0px 0px 10px rgba(94, 175, 225, 0.7);
+    }
+
+    &-meat {
+      margin: 6px 0;
+    }
+  }
+
+  &__main {
+    flex: 1 0 auto;
+  }
+
+  &__logo {
+    display: block;
+    width: 250px;
+    margin: auto;
+
+    img {
+      display: block;
+    }
+  }
+
+  @media (max-width: breakpoint-min('sm')) {
+    padding: 2em 1em;
+
+    &__logo {
+      width: 150px;
+    }
+  }
+}
