@@ -34,23 +34,18 @@
 
   .section-1 {
     margin: 6em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media (max-width: breakpoint-min('lg')) {
       margin: 3em auto;
-
-      .section-1-info-box {
-        margin: 0;
-
-        .info-box {
-          margin: 0 0 2em 0;
-        }
-      }
     }
 
     @media (max-width: breakpoint-min('sm')) {
-      img.hydradx {
-        max-width: 300px;
-      }
+      //img.basilisk {
+      //  max-width: 300px;
+      //}
     }
   }
 
@@ -65,20 +60,27 @@
     max-width: 1205px;
     margin: 0.4em auto 0.4em auto;
   }
-  .sub-headline-1 {
+  .sub-1-headline-1 {
     text-align: center;
     max-width: 1205px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 28px;
+    line-height: 30px;
   }
 
-  .section-1-info-box {
+  .sub-2-headline-1 {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .section-2-info-box {
     max-width: 960px;
     margin: 4em auto;
-
-    .info-box {
-      margin: 15px;
-    }
   }
 
   .headline-2 {
@@ -89,7 +91,6 @@
   }
 
   .section-2 {
-    margin-bottom: 10em;
 
     @media (max-width: breakpoint-min('xl')) {
       margin-bottom: 7em;
