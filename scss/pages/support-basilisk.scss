@@ -1,0 +1,53 @@
+.page-support-basilisk {
+  .support-basilisk-title-wrapper {
+    padding: 4em 0;
+  }
+
+  .learn-how-to-support {
+    padding: 6em 0;
+    max-width: 800px;
+  }
+
+  .learn-how-to-support-content {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .support-basilisk-title {
+    color: var(--primray-color);
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .infographic-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4em 0;
+  }
+
+  .infographic-img {
+    width: 690px;
+  }
+
+  .infographic-text {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 550px;
+    font-size: 34px;
+    line-height: 44px;
+    color: var(--hydradx-and-basilisk-color);
+  }
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+  }
+
+  .btn-support-basilisk {
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+  }
+}

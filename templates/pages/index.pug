@@ -10,7 +10,6 @@ block append head
 
 block content
     .container.px-3
-        .header-background
         .section-1
             .text-center
                 img.basilisk(src=url('/images/basilisk.png'))
@@ -19,8 +18,8 @@ block content
             h4.sub-1-headline-1 Swap, Bootstrap & Provide Liquidity
             img.basilisk-logo-md(src=url('images/logo-neon-dark-green.svg'))
             h4.sub-2-headline-1 Supporting the long tail of cryptoassets and experimenting with financial applications and governance.
-        .section-2
-            .basilisk-box-shadow
+    .container-wrapper
+        .section-2.basilisk-box-shadow
             .row.section-2-info-box.gx-0
                 .col-lg-4
                     .info-box-wrapper
@@ -36,30 +35,47 @@ block content
                     .info-box-wrapper
                         span.ff-sans.info-box-title Supporting Long Tail of Assets
                         span.info-box-content Build to be flexible and facilitate liquidity for many tokens. Each token is different. Varying maturity of tokens requires different curves to optimize its liquidity.
-    .container-wrapper
+    .container-wrapper.pos-relative
         img(src=url('images/mountain.png'))
+        .container.px-3.mountain-logo-slogan-wrapper
+            .mountain-logo-slogan
+                span.mountain-logo-slogan-text Build Your Next Financial Application On Basilisk
+
+                a.btn-build-on-basilisk.btn.btn__lg BUILD ON BASILISK
+
+                img.green-ellipse-1(src=url('images/green-ellipse-1.svg'))
+
+                img.green-ellipse-2(src=url('images/green-ellipse-2.svg'))
+
+                //svg(width='500' height='500')
+                //    line(x1='80' y1='80' x2='350' y2='350' stroke='red')
+        div.banner-wrapper
+            img(src=url('images/banner.svg'))
+        div.build-on-basilisk
+            img(src=url('images/weird-stroke.svg'))
+        div.build-on-basilisk-detail-wrapper
+            img.arrow-style(src=url('images/arrow.svg'))
+            span.build-on-basilisk-text Optimized for DeFi applications, this is the place for you to build your next generation financial use case cheap & efficient.
+
+    .container-wrapper
+        .headline-2.basilisk-box-shadow-2 Roadmap
         .container.px-3
-            .section-3
-                span.section-3 Build your next financial application on Basilisk
+            table.table.roadmap
+                each one, index in roadmap
+                    - var lastTaskClass = ((index === (roadmap.length - 1)) ? 'task-last' : '');
+                    - var firstTaskClass = ((index === 0) ? 'task-first' : '');
+                    tr(class=one ? '' : 'p-color')
+                        td(class=`${firstTaskClass} ${lastTaskClass}`)
+                            ul.listing
+                                li.listing__item(class=one.what === "WHAT"? 'listing__item--arrow-none':'')=one.what
+                        td(class=`${firstTaskClass} ${lastTaskClass}`)
+                            ul.listing.listing__no-style
+                                li.listing__item(class='')=one.when
+            h1.headline-2 HydraDX And Basilisk
+            .hydradx-and-basilisk-wrapper
+                .col-lg-6.hydradx-and-basilisk-content-wrapper
+                    span.hydradx-and-basilisk-text We imagine that Basilisk will attract builders that would like to experiment with exotic DeFi applications, testing their ideas in the real world.
 
-
-
-
-block head-extra
-    style.
-        .basilisk-logo-md {
-            width: 300px;
-        }
-
-        .basilisk-box-shadow {
-            background: linear-gradient(rgba(0, 0, 0, 0) 0.01%, #000000 23.13%, #000000 58.42%, #000000 99.99%);
-            width: 100%;
-            height: 500px;
-            position: absolute;
-            left: 0;
-            z-index: -1;
-            bottom: -700px;
-        }
-
-
-
+                    span.hydradx-and-basilisk-text In time, HydraDX and Basilisk will become interoperable allowing a smooth transition between liquidity pools on which applications are built.
+                .col-lg-6
+                    img(src=url('images/hydradx-and-basilisk.svg'))

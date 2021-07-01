@@ -1,23 +1,13 @@
 mixin footer
     - var linksSize = footerLinks.length
-    - var leftSize = parseInt(linksSize / 2)
-    - var leftLinks = footerLinks.slice(0, leftSize)
-    - var rightLinks = footerLinks.slice(leftSize)
 
     footer.footer
         .footer__inner.d-none.d-xl-flex
-            ul.footer__menu.footer__menu-left
-                each link in leftLinks
-                    a.footer__menu-item.btn.btn__sm(href=link.url target=link.target)=link.text
-            //img.footer__logo(src=url('/images/logo-blue.svg'))
+            img.footer-icon(src=url('images/left-footer-icon.svg'))
             ul.footer__menu.footer__menu-right
-                each link in rightLinks
-                    a.footer__menu-item.btn.btn__sm(href=link.url target=link.target)=link.text
-        .footer__inner-mobile.d-xl-none
-            //img.footer__logo(src=url('/images/logo-blue.svg'))
-            ul.footer__menu
                 each link in footerLinks
-                    a.footer__menu-item.btn.btn__sm(href=link.url target=link.target)=link.text
+                    a.footer__menu-item.btn.btn__sm(href=link.url target=link.target)=link.test
+            img.footer-icon(src=url('images/right-footer-icon.png'))
 
 
 

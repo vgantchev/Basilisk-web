@@ -1,5 +1,5 @@
 .p-color {
-  color: var(--primray-color);
+  color: var(--text-color);
 }
 
 .p-shadow {
@@ -47,7 +47,7 @@
 }
 
 .headline-2 {
-  font-family: var(--sans-font-hl);
+  font-family: var(--sans-font);
   font-size: 40px;
 
   @media (max-width: breakpoint-min('sm')) {

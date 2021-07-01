@@ -1,0 +1,34 @@
+.page-hydration {
+  .join-hydration {
+    max-width: 951px;
+  }
+
+  .join-hydration-title {
+    color: var(--primray-color);
+  }
+
+  .img {
+    display: block;
+    margin: auto;
+  }
+
+  img.logo {
+    @extend .img;
+    width: 150px;
+  }
+
+  img.separator {
+    @extend .img;
+    width: 68px;
+  }
+
+  .btn-application-form {
+    margin-top: 2em;
+  }
+
+  @media (max-width: breakpoint-min(sm)) {
+    .join-hydration {
+      margin-bottom: 5em;
+    }
+  }
+}
