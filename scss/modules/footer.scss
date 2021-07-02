@@ -33,7 +33,7 @@
 
   &__menu {
     padding: 0;
-    margin: 1em;
+    margin: 2em 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -50,6 +50,16 @@
   @media (max-width: breakpoint-min('lg')) {
     &__shape {
       top: 5px;
+    }
+  }
+
+  @media (max-width: breakpoint-min('md')) {
+    .right-footer-icon {
+      display: none;
+    }
+
+    .footer__inner {
+      flex-direction: column;
     }
   }
 
