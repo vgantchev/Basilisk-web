@@ -5,6 +5,7 @@
 
   .join-hydration-title {
     color: var(--primray-color);
+    padding-top: 30px;
   }
 
   .img {
@@ -23,7 +24,7 @@
   }
 
   .btn-application-form {
-    margin-top: 2em;
+    margin-top: 2.5em;
   }
 
   @media (max-width: breakpoint-min(sm)) {
