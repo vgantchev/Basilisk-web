@@ -1,0 +1,75 @@
+extends ../_layouts/main
+
+block prepend head
+    - var title = siteDescription
+
+block append head
+    meta(property='og:description' content=siteDescription)
+    meta(property='og:url' content=rootUrl('/'))
+    meta(property='description' content=siteDescription)
+
+block content
+    .container.px-3
+        .section-1
+            .text-center
+                img.basilisk(src=url('/images/basilisk.png'))
+
+            h1.headline-1 Liquidity protocol built on Kusama
+            h4.sub-1-headline-1 Swap, Bootstrap & Provide Liquidity
+            img.basilisk-logo-md(src=url('images/logo-neon-dark-green.svg'))
+            h4.sub-2-headline-1 Supporting the long tail of cryptoassets and experimenting with financial applications and governance.
+    .container-wrapper
+        .section-2.basilisk-box-shadow
+            .row.section-2-info-box.gx-0
+                .col-lg-4
+                    .info-box-wrapper
+                        span.ff-sans.info-box-title Launchpad for Tokens: Liquidity Bootstrapping Pools
+                        span.info-box-content Traditional xyk models are not ideal for a price discovery of new assets. We are building a product that makes bootstrapping liquidity easier and efficient.
+
+                .col-lg-4
+                    .info-box-wrapper
+                        span.ff-sans.info-box-title Cross-Chain Capabilities
+                        span.info-box-content Kusama enables cross-chain communication and Basilisk transforms that into cross chain swaps, composable & compounding liquidity mining incentives
+
+                .col-lg-4
+                    .info-box-wrapper
+                        span.ff-sans.info-box-title Supporting Long Tail of Assets
+                        span.info-box-content Build to be flexible and facilitate liquidity for many tokens. Each token is different. Varying maturity of tokens requires different curves to optimize its liquidity.
+    .container-wrapper.pos-relative
+        .container.px-3
+            .mountain-logo-slogan
+                h1.mountain-logo-slogan-text Build Your Next Financial Application On Basilisk
+
+            .row.build-on-basilisk-wrapper
+                .col-lg-4
+                .col-lg-4.build-on-basilisk
+                    div.build-on-basilisk-img
+                    div.btn-build-on-basilisk
+                        a.btn.btn__lg BUILD ON BASILISK
+                .col-lg-4
+                    div.build-on-basilisk-detail-wrapper
+                        div.build-on-basilisk-text Optimized for DeFi applications, this is the place for you to build your next generation financial use case cheap & efficient.
+        div.banner-wrapper
+            img(src=url('images/banner.svg'))
+    .container-wrapper
+        .headline-2.basilisk-box-shadow-2 Roadmap
+        .container.px-3
+            table.table.roadmap
+                each one, index in roadmap
+                    - var lastTaskClass = ((index === (roadmap.length - 1)) ? 'task-last' : '');
+                    - var firstTaskClass = ((index === 0) ? 'task-first' : '');
+                    tr(class=one ? '' : 'p-color')
+                        td(class=`${firstTaskClass} ${lastTaskClass}`)
+                            ul.listing
+                                li.listing__item(class=one.what === "WHAT"? 'listing__item--arrow-none':'')=one.what
+                        td(class=`${firstTaskClass} ${lastTaskClass}`)
+                            ul.listing.listing__no-style
+                                li.listing__item(class='')=one.when
+            h1.headline-2 HydraDX And Basilisk
+            .row.hydradx-and-basilisk-wrapper
+                .col-lg-6.hydradx-and-basilisk-content-wrapper
+                    span.hydradx-and-basilisk-text We imagine that Basilisk will attract builders that would like to experiment with exotic DeFi applications, testing their ideas in the real world.
+
+                    span.hydradx-and-basilisk-text In time, HydraDX and Basilisk will become interoperable allowing a smooth transition between liquidity pools on which applications are built.
+                .col-lg-6
+                    img.hydradx-and-basilisk-img(src=url('images/hydradx-and-basilisk.svg'))

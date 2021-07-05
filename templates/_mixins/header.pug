@@ -4,15 +4,29 @@ mixin header
 
     header.header.header-desktop.d-xl-flex
         a.header__logo(href=url('/'))
-            img(src=url('/images/Logo-neon-dark-green-left.svg'))
+            img(src=url('/images/left-footer-icon.svg'))
         ul.header__menu
+            - var currentVersion = 'Version 1'
+            ul.version-menu
+                each version, _locale in header.homepage
+                    if _locale === defaultVersion
+                        - currentVersion = version.text
+                    li
+                        a(href=url(version.url))=version.text
+                //li.d-xl-none
+                //    a.back(role='button') Back
+
+            div.version-selector
+                span.version-selector__current=currentVersion
+                img.version-selector__arrow-down(src=url('/images/arrow-down.svg'))
             each item in header.menu
                 li
-                    a(href=url(item.url, locale) class=active(extractTemplateName(item.url)) target=item.target)=__(item.text)
+                    a(href=url(item.url, locale, defaultVersion) class=active(extractTemplateName(item.url)) target=item.target)=__(item.text)
         .header__actions
             - var currentLanguage = 'Eng'
             ul.language-menu
                 each language, _locale in header.languages
+                    -console.log('_locale', _locale)
                     if _locale === locale
                         - currentLanguage = language
                     li
