@@ -1,42 +1,32 @@
 [
   {
     "test": "GITHUB",
-    "url": "#",
+    "url": "https://github.com/galacticcouncil",
     "target": "_blank"
   },
   {
     "test": "TWITTER",
-    "url": "#",
+    "url": "https://twitter.com/bsx_finance",
     "target": "_blank"
   },
   {
     "test": "DISCORD",
-    "url": "#",
+    "url": "https://discord.gg/S8YZj5aXR6",
     "target": "_blank"
   },
   {
     "test": "TELEGRAM",
-    "url": "#",
+    "url": "https://t.me/bsx_fi",
     "target": "_blank"
   },
   {
     "test": "DOCS",
-    "url": "#",
-    "target": "_blank"
-  },
-  {
-    "test": "FAQS",
-    "url": "#",
-    "target": "_blank"
-  },
-  {
-    "test": "JOBS",
-    "url": "#",
+    "url": "https://docs.bsx.fi",
     "target": "_blank"
   },
   {
     "test": "BLOG",
-    "url": "#",
+    "url": "https://basiliskfi.substack.com/",
     "target": "_blank"
   }
 ]
