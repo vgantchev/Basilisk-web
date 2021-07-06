@@ -4,8 +4,8 @@ const roadmap = require('./data/roadmap.json');
 const header = require('./data/header.json');
 
 module.exports = {
-  baseUrl: 'https://web3vietnam.github.io/',
-  baseContext: 'basilisk-website',
+  baseUrl: 'https://bsx.fi',
+  baseContext: '',
   siteName: 'Basilisk',
   siteDescription: 'Liquidity protocol build on Kusama',
   dateTimeFormat: 'ddd, MM/DD/YYYY - HH:mm',
