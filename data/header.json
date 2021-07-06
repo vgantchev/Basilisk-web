@@ -1,19 +1,9 @@
 {
-  "homepage": {
-    "ver1": {
-      "text": "Version 1",
+  "menu": [
+    {
+      "text": "ABOUT",
       "url": "/#"
     },
-    "ver2": {
-      "text": "Version 2",
-      "url": "/home-page-ver-2.html"
-    },
-    "ver3": {
-      "text": "Version 3",
-      "url": "/home-page-ver-3.html"
-    }
-  },
-  "menu": [
     {
       "text": "SUPPORT BASILISK",
       "url": "/support-basilisk.html"

@@ -13,7 +13,6 @@ module.exports = {
   postUrlStyle: 'POSTS_SLUG',
   locales: ['en', 'vi'],
   defaultLocale: 'en',
-  defaultVersion: "ver1",
   eventRegister,
   footerLinks,
   roadmap,

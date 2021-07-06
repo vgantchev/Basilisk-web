@@ -1,18 +1,16 @@
 .page-index {
-  background-color: #171b22;
-
   .header-background {
-    background-size: cover;
-    background-image: url("./images/header-background-1.png");
+    background-size: contain;
+    background-image: url("./images/header-background-2.png");
     background-repeat: no-repeat;
     display: flow-root;
-    height: 695px;
+    height: 1375px;
     position: absolute;
+    z-index: -1;
     width: 100%;
-    top: 0;
+    top: -26px;
     left: 0;
     min-width: $min-width;
-
 
     @media (max-width: breakpoint-min('xl')) {
       background-size: cover;
@@ -35,32 +33,18 @@
   }
 
   .section-1 {
-    margin: 37em auto 0 auto;
+    margin: 186px auto 13px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   img.basilisk {
+    margin-bottom: 202px;
+    max-width: 998px;
   }
 
   .headline-1 {
-    color: var(--primray-color);
-    text-align: center;
-    text-transform: uppercase;
-    max-width: 1205px;
-    margin: 0.4em auto 0.4em auto;
-  }
-  .sub-1-headline-1 {
-    text-align: center;
-    max-width: 1205px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 28px;
-    line-height: 30px;
-  }
-
-  .sub-2-headline-1 {
     text-align: center;
     max-width: 800px;
     margin-left: auto;
@@ -68,6 +52,7 @@
     font-size: 34px;
     line-height: 44px;
   }
+
 
   .section-2-info-box {
     max-width: 1100px;
@@ -78,7 +63,18 @@
     @extend .p-color;
     text-align: center;
     text-transform: uppercase;
-    padding: 0 1em;
+    padding: 72px 1em;
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .headline-3 {
+    @extend .p-color;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px 1em;
+    font-size: 34px;
+    line-height: 44px;
   }
 
   .section-2 {
@@ -98,31 +94,15 @@
   .pos-relative {
     position: relative;
     background-image: url("./images/mountain.png");
+    background-color: #000000;
     background-repeat: no-repeat;
-    height: 900px;
+    height: 765px;
     background-size: contain;
   }
 
   .basilisk-logo-md {
     width: 300px;
     padding-top: 200px;
-  }
-
-  .basilisk-box-shadow {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    z-index: -1;
-    padding: 0.7em 0;
-  }
-
-  .basilisk-box-shadow-2 {
-    width: 100%;
-    height: 200px;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
   }
 
   .mountain-logo-slogan {
@@ -138,7 +118,7 @@
     font-size: 34px;
     text-align: center;
     line-height: 44px;
-    padding: 60px 0;
+    padding: 60px 0 50px 0;
   }
 
   .banner-wrapper {
@@ -156,10 +136,8 @@
   }
 
   .build-on-basilisk-detail-wrapper {
-    //width: 390px;
-    //position: absolute;
-    top: 34%;
-    right: 12%;
+    padding-top: 8px;
+    padding-left: 16px;
   }
 
   .build-on-basilisk-img {
@@ -169,7 +147,7 @@
     width: 100%;
     height: 765px;
     position: absolute;
-    top: -109px;
+    top: -100px;
     left: -396px;
     z-index: 0;
   }
@@ -245,7 +223,7 @@
   }
 
   table.table.roadmap {
-    margin-bottom: 5em;
+    margin-bottom: 100px;
     border: 2px solid var(--primray-color);
     border-radius: 5px;
     width: 100%;
@@ -323,8 +301,21 @@
       height: 800px;
     }
 
+    .hydradx-and-basilisk-content-wrapper {
+      order: 2;
+      padding: 0 48px;
+    }
+
+    .hydradx-and-basilisk-img-wrapper {
+      order: 1;
+    }
+
+    .info-box-title {
+      height: auto;
+    }
+
     .build-on-basilisk {
-      margin-bottom: 20em;
+      margin-bottom: 16em;
     }
 
     .green-ellipse-1 {
@@ -339,7 +330,7 @@
   @media (max-width: breakpoint-min(md)) {
     .build-on-basilisk-img {
       left: -49vw;
-      top: -40px;
+      top: -35px;
     }
 
     .hydradx-and-basilisk-img {
@@ -353,7 +344,6 @@
     }
 
     .mountain-logo-slogan-text {
-      padding-top: 0;
       margin-top: -20px;
     }
 
@@ -368,8 +358,27 @@
 
   @media (max-width: 499px) {
     .build-on-basilisk-img {
-      left: -90vw;
+      left: -40vw;
+      top: -10px;
+    }
+
+    .btn-build-on-basilisk {
+      justify-content: flex-end;
+    }
+
+    .headline-1 {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    .info-box-title {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .info-box-content {
+      font-size: 15px;
+      line-height: 22px;
     }
   }
-
 }
