@@ -1,0 +1,14 @@
+{
+  "buildOnBasilisk": {
+    "url": "https://discord.gg/HjSkqnbJMZ",
+    "target": "_blank"
+  },
+  "supportBasilisk": {
+    "url": "https://loan.bsx.fi",
+    "target": "_blank"
+  },
+  "supportBasiliskLearnMore": {
+    "url": "https://docs.bsx.fi/parachains",
+    "target": "_blank"
+  }
+}
