@@ -46,7 +46,7 @@
 
   .headline-1 {
     text-align: center;
-    max-width: 800px;
+    max-width: 840px;
     margin-left: auto;
     margin-right: auto;
     font-size: 34px;
@@ -55,15 +55,14 @@
 
 
   .section-2-info-box {
-    max-width: 1100px;
+    max-width: 1360px;
     margin: 0 auto;
   }
 
   .headline-2 {
     @extend .p-color;
     text-align: center;
-    text-transform: uppercase;
-    padding: 72px 1em;
+    padding: 70px 1em;
     font-size: 34px;
     line-height: 44px;
   }
@@ -78,6 +77,7 @@
   }
 
   .section-2 {
+    padding-bottom: 70px;
   }
 
   .weird-stroke {
@@ -137,7 +137,6 @@
 
   .build-on-basilisk-detail-wrapper {
     padding-top: 8px;
-    padding-left: 16px;
   }
 
   .build-on-basilisk-img {
@@ -160,6 +159,8 @@
 
   .build-on-basilisk-text {
     display: flex;
+    font-size: 24px;
+    line-height: 32px;
     color: var(--hydradx-and-basilisk-color);
 
     &:before {
@@ -169,7 +170,7 @@
       background-size: contain;
       display: inline-block;
       vertical-align: middle;
-      margin: 0.5em 12px 0.5em 0;
+      margin: 0.3em 12px 0.3em 0;
       flex: 0 0 22px;
     }
   }
@@ -208,6 +209,9 @@
   .hydradx-and-basilisk-text {
     position: relative;
     display: flex;
+    padding: 22px 196px 22px 0;
+    font-size: 24px;
+    line-height: 32px;
     color: var(--hydradx-and-basilisk-color);
   }
 
@@ -222,10 +226,16 @@
     flex: 0 0 22px;
   }
 
+  .table-road-map-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   table.table.roadmap {
-    margin-bottom: 100px;
+    margin-bottom: 84px;
     border: 2px solid var(--primray-color);
     border-radius: 5px;
+    max-width: 930px;
     width: 100%;
     border-spacing: 0;
 
@@ -276,6 +286,20 @@
   }
 
   @media (max-width: 1490px) {
+    .section-1 {
+      margin: 95px auto 30px auto;
+    }
+
+    .hydradx-and-basilisk-text {
+      padding: 12px 80px 12px 0;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    img.basilisk {
+      margin-bottom: 120px;
+    }
+
     .mountain-logo-slogan-text {
       font-size: 28px;
       line-height: 36px;
@@ -288,6 +312,11 @@
   }
 
   @media (max-width: breakpoint-min(xl)) {
+    .info-box-title {
+      padding: 0.4em 1.5em;
+      font-size: 20px;
+    }
+
     .mountain-logo-slogan-text {
       font-size: 24px;
       line-height: 25px;
@@ -298,12 +327,16 @@
   @media (max-width: breakpoint-min(lg)) {
     .pos-relative {
       background-image: url("./images/mountain-smaller-screen.svg");
-      height: 800px;
+      height: 700px;
     }
 
     .hydradx-and-basilisk-content-wrapper {
       order: 2;
       padding: 0 48px;
+    }
+
+    .hydradx-and-basilisk-text {
+      padding: 12px 0;
     }
 
     .hydradx-and-basilisk-img-wrapper {
@@ -315,7 +348,7 @@
     }
 
     .build-on-basilisk {
-      margin-bottom: 16em;
+      margin-bottom: 12em;
     }
 
     .green-ellipse-1 {
@@ -328,9 +361,19 @@
   }
 
   @media (max-width: breakpoint-min(md)) {
+    .headline-1 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+
     .build-on-basilisk-img {
       left: -49vw;
       top: -35px;
+    }
+
+    .build-on-basilisk-text {
+      font-size: 20px;
+      line-height: 32px;
     }
 
     .hydradx-and-basilisk-img {
@@ -341,6 +384,11 @@
   @media (max-width: breakpoint-min(sm)) {
     .pos-relative {
       height: 600px;
+    }
+
+    .build-on-basilisk-text {
+      font-size: 15px;
+      line-height: 22px;
     }
 
     .mountain-logo-slogan-text {
@@ -362,6 +410,10 @@
       top: -10px;
     }
 
+    .hydradx-and-basilisk-text {
+      font-size: 15px;
+      line-height: 22px;
+    }
     .btn-build-on-basilisk {
       justify-content: flex-end;
     }
@@ -369,6 +421,10 @@
     .headline-1 {
       font-size: 20px;
       line-height: 26px;
+    }
+
+    .info-box-wrapper {
+      padding: 10px 0;
     }
 
     .info-box-title {

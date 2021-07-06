@@ -1,4 +1,37 @@
 .page-hydration {
+  .header-background {
+    background-size: cover;
+    background-image: url("./images/header-background-2.png");
+    background-repeat: no-repeat;
+    display: flow-root;
+    height: 920px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: -26px;
+    left: 0;
+    min-width: $min-width;
+
+    @media (max-width: breakpoint-min('xl')) {
+      background-size: cover;
+      background-position-x: right;
+      height: 975px;
+      top: -80px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--bgc);
+        opacity: 0.5;
+      }
+    }
+  }
+
   .join-hydration {
     max-width: 951px;
   }
@@ -6,6 +39,11 @@
   .join-hydration-title {
     color: var(--primray-color);
     padding-top: 30px;
+  }
+
+  .join-hydration-content {
+    font-size: 24px;
+    line-height: 36px;
   }
 
   .img {
@@ -30,6 +68,15 @@
   @media (max-width: breakpoint-min(sm)) {
     .join-hydration {
       margin-bottom: 5em;
+    }
+
+    .join-hydration-content {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    .btn-application-form {
+      margin-top: 5em;
     }
   }
 }

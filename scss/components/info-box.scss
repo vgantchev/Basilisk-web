@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
 }
 
 .info-box-title {
@@ -10,15 +9,17 @@
   line-height: 30px;
   color: $primary-color;
   text-align: center;
-  padding: 0.4em 0.8em;
+  padding: 0.4em 3em;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
 }
 .info-box-content {
   font-size: 17px;
   line-height: 26px;
   color: $info-box-content-color;
   text-align: center;
+  padding: 0 1.6em;
 }

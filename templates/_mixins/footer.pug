@@ -6,7 +6,7 @@ mixin footer
             img.footer-icon(src=url('images/left-footer-icon.svg'))
             ul.footer__menu.footer__menu-right
                 each link in footerLinks
-                    a.footer__menu-item.btn.btn__sm(href=link.url target=link.target)=link.test
+                    a.btn.btn__sm.footer__menu-item(href=link.url target=link.target)=link.test
             img.footer-icon.right-footer-icon(src=url('images/right-footer-icon.png'))
 
 
