@@ -12,23 +12,22 @@ block content
     .container.px-3.text-center
         .header-background
         .support-basilisk-title-wrapper
-            .headline-2.text-uppercase.support-basilisk-title Support Basilisk
-            .headline-2.text-uppercase.support-basilisk-title to Become a Parachain
+            .headline-2.text-uppercase.support-basilisk-title Support Basilisk to Become a Parachain
         .infographic-item
-            span.infographic-text Parachain is an exclusive slot on a Kusama network, enabling shared security and interoperability
+            span.infographic-text=__('supportBasilisk1')
             img.infographic-img(src=url('images/infographic-1.svg'))
         .infographic-item
             img.infographic-img(src=url('images/infographic-2.svg'))
-            span.infographic-text Kusama relay connects parachain but starts as a blank slate - with open parachain slots.
+            span.infographic-text=__('supportBasilisk2')
         .infographic-item
-            span.infographic-text Parachains are to be reserved with KSM tokens. Various blockchain projects compete for scarce parachain slots and KSM holders lock their KSM tokens for a certain period of time to help their favorite get the slot.
+            span.infographic-text=__('supportBasilisk3')
             img.infographic-img(src=url('images/infographic-3.svg'))
         .infographic-item
             img.infographic-img(src=url('images/infographic-4.svg'))
-            span.infographic-text Basilisk will participate in the upcoming Kusama parachain auctions to earn a slot among the first. The backers of the auction will be rewarded with BSX as they lock their KSM to support Basilisk candidacy.
+            span.infographic-text=__('supportBasilisk4')
     .container.px-3.learn-how-to-support.text-center
-        .headline-2.text-uppercase.support-basilisk-title.pb-5 Learn How to Support Basilisk Crowdloan
-        span.learn-how-to-support-content Get BSX Token For Supporting Basilisk Parachain Crowdloan
+        .headline-2.text-uppercase.support-basilisk-title.pb-5=__('learnHowToSupport')
+        span.learn-how-to-support-content=__('getBSXToken')
         .btn-wrapper
-            a.btn.btn-support-basilisk.btn__md(href=pageLinks.supportBasilisk.url target=pageLinks.supportBasilisk.target) SUPPORT BASILISK
-            a.btn.btn-support-basilisk.btn__md(href=pageLinks.supportBasiliskLearnMore.url target=pageLinks.supportBasiliskLearnMore.target) LEARN MORE ABOUT PARACHAINS
+            a.btn.btn-support-basilisk.btn__md(href=pageLinks.supportBasilisk.url target=pageLinks.supportBasilisk.target)=__('supportBasilisk')
+            a.btn.btn-support-basilisk.btn__md(href=pageLinks.supportBasiliskLearnMore.url target=pageLinks.supportBasiliskLearnMore.target)=__('learnMoreAboutParachains')
