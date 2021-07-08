@@ -14,28 +14,28 @@ block content
         .section-1
             img.basilisk(src=url('/images/basilisk-banner.png'))
 
-            h4.headline-1 Supporting The Long Tail Of Cryptoassets And Experimenting With Financial Applications And Governance.
+            h4.headline-1=__('supportingTheLongTail')
     .container-wrapper
         .section-2
             .row.section-2-info-box.gx-0
                 .col-lg-4
                     .info-box-wrapper
-                        span.ff-sans.info-box-title Launchpad for Tokens: Liquidity Bootstrapping Pools
-                        span.info-box-content Traditional xyk models are not ideal for a price discovery of new assets. We are building a product that makes bootstrapping liquidity easier and efficient.
+                        span.ff-sans.info-box-title=__('infobox-title-1')
+                        span.info-box-content=__('infobox-content-1')
 
                 .col-lg-4
                     .info-box-wrapper
-                        span.ff-sans.info-box-title Cross-Chain Capabilities
-                        span.info-box-content Kusama enables cross-chain communication and Basilisk transforms that into cross chain swaps, composable & compounding liquidity mining incentives
+                        span.ff-sans.info-box-title=__('infobox-title-2')
+                        span.info-box-content=__('infobox-content-2')
 
                 .col-lg-4
                     .info-box-wrapper
-                        span.ff-sans.info-box-title Supporting Long Tail of Assets
-                        span.info-box-content Build to be flexible and facilitate liquidity for many tokens. Each token is different. Varying maturity of tokens requires different curves to optimize its liquidity.
+                        span.ff-sans.info-box-title=__('infobox-title-3')
+                        span.info-box-content=__('infobox-content-3')
     .container-wrapper.pos-relative
         .container.px-3
             .mountain-logo-slogan
-                h1.mountain-logo-slogan-text Build Your Next Financial Application On Basilisk
+                h1.mountain-logo-slogan-text=__('mountainLogoSloganText')
 
             .row.build-on-basilisk-wrapper
                 .col-lg-4
@@ -45,11 +45,11 @@ block content
                         a.btn.btn__lg(href=pageLinks.buildOnBasilisk.url target=pageLinks.buildOnBasilisk.target) BUILD ON BASILISK
                 .col-lg-4
                     div.build-on-basilisk-detail-wrapper
-                        div.build-on-basilisk-text Optimized for DeFi applications, this is the place for you to build your next generation financial use case cheap & efficient.
+                        div.build-on-basilisk-text=__('buildOnBasiliskText')
         div.banner-wrapper
             img(src=url('images/banner.svg'))
     .container-wrapper
-        .headline-2 Roadmap
+        .headline-2=__('roadMap')
         .container.px-3
             .table-road-map-wrapper
                 table.table.roadmap
@@ -63,11 +63,10 @@ block content
                             td(class=`${firstTaskClass} ${lastTaskClass}`)
                                 ul.listing.listing__no-style
                                     li.listing__item(class='')=one.when
-            .headline-3 HydraDX And Basilisk
+            .headline-3=__('hydradxAndBasilisk')
             .row.hydradx-and-basilisk-wrapper
-                    .col-lg-6.hydradx-and-basilisk-content-wrapper
-                        span.hydradx-and-basilisk-text We imagine that Basilisk will attract builders that would like to experiment with exotic DeFi applications, testing their ideas in the real world.
-
-                        span.hydradx-and-basilisk-text In time, HydraDX and Basilisk will become interoperable allowing a smooth transition between liquidity pools on which applications are built.
-                    .col-lg-6.hydradx-and-basilisk-img-wrapper
-                        img.hydradx-and-basilisk-img(src=url('images/hydradx-and-basilisk.svg'))
+                .col-lg-6.hydradx-and-basilisk-content-wrapper
+                    span.hydradx-and-basilisk-text=__('hydradxAndBasiliskText1')
+                    span.hydradx-and-basilisk-text=__('hydradxAndBasiliskText2')
+                .col-lg-6.hydradx-and-basilisk-img-wrapper
+                    img.hydradx-and-basilisk-img(src=url('images/hydradx-and-basilisk.png'))
