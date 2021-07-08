@@ -33,7 +33,9 @@
   }
 
   .support-basilisk-title-wrapper {
-    padding: 4em 0;
+    display: flex;
+    justify-content: center;
+    padding: 4em 2em;
   }
 
   .learn-how-to-support {
@@ -158,7 +160,5 @@
     .infographic-img {
       width: 328px;
     }
-
-
   }
 }

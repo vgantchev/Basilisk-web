@@ -99,6 +99,7 @@
     white-space: nowrap;
   }
 
+
   .btn-launch-app:after {
     content: '';
     background-image: url("./images/arrow.svg");
@@ -108,9 +109,14 @@
     vertical-align: middle;
     margin-left: 10px;
     width: 20px;
-    height: 20px;
+    height: 18px;
     flex: 0 0 22px;
   }
+
+  .btn-launch-app:hover:after {
+    background-image: url("./images/arrow-red.svg");
+  }
+
 
   @media (max-width: breakpoint-min('xxl')) {
     padding: 1em;
@@ -228,7 +234,7 @@
       display: inline-block;
       width: 25px;
       height: 2px;
-      background-color: var(--text-color);
+      background-color: var(--primray-color);
       border-radius: 2px;
       transition: 0.3s;
       box-shadow: 0px 0px 10px rgba(94, 175, 225, 0.7);
