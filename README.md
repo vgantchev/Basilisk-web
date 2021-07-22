@@ -16,3 +16,5 @@ $ npx meblog serve
 ```
 
 Your build should be served under http://localhost:3000/
+
+Happy development!
