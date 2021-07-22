@@ -8,10 +8,7 @@ This repository serves the Basilisk website at https://bsx.fi
 # Install using your fav package manager
 $ yarn install
 
-# Build
-$ npx meblog build
-
-# Serve the build
+# Serve
 $ npx meblog serve
 ```
 
