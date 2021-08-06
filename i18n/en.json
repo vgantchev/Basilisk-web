@@ -12,7 +12,7 @@
 	"infobox-title-2": "Modular AMM Design",
 	"infobox-title-3": "Community First",
 	"infobox-content-1": "Basilisk helps young cryptoprojects distribute tokens to their communities while navigating initial price discovery. It provides a gateway to liquidity bootstrapping in Kusama.",
-	"infobox-content-2": "Basilisk is designed to be flexible. Projects can bootstrap liquidity using an AMM implementation of their choice - Uniswap-like pools, Balancer-like LBP, auctions and an NFT marketplace.",
+	"infobox-content-2": "Basilisk is designed to be flexible. Projects can bootstrap liquidity using an AMM implementation of their choice - Uniswap-like pools, Balancer-like LBP, auctions or an NFT marketplace.",
 	"infobox-content-3": "Above all, Basilisk is an outspoken community-centric project. It has the ambition to fully decentralize its governance and quickly become the first community-ran parachain.",
 	"mountainLogoSloganText": "Build Your Next Financial Application On Basilisk",
 	"buildOnBasiliskText": " Optimized for DeFi applications, this is the place for you to build your next generation financial use case cheap & efficient.",
