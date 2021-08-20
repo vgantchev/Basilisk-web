@@ -94,6 +94,10 @@
     }
   }
 
+  &__menu-mobile {
+    display: none;
+  }
+
   .btn-launch-app {
     padding: 0.3em 0.5em 0.3em 1em;
     white-space: nowrap;
@@ -154,6 +158,7 @@
     }
 
     &__menu {
+      display: none;
       height: calc(100% - 150px - 2em);
       overflow-y: auto;
 
@@ -161,6 +166,13 @@
         display: block;
         font-size: 28px;
       }
+    }
+
+    &__menu-mobile {
+      display: block;
+      padding-left: 0;
+      overflow: auto;
+      max-height: calc(100vh - 288px);
     }
 
     &__actions {
@@ -195,6 +207,20 @@
       width: 100%;
       text-align: left;
     }
+  }
+}
+
+.child-list {
+  display: none;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu-mobile-item {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 

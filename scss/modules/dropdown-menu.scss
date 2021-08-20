@@ -1,0 +1,54 @@
+.menu-item:hover .dropout-menu {
+  display: block;
+}
+
+.dropout-menu {
+  display: none;
+  padding: 5px;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  font-size: 20px;
+  color: #000000;
+  background-color: $overlay-background-color;
+  list-style-type: none;
+  max-width: 396px;
+  z-index: 10;
+  //text-transform: capitalize;
+
+  &-item {
+    padding: 5px 2px 5px 30px;
+    margin: 0 !important;
+    width: 100%;
+    color: $text-color;
+    font-family: $sans-font;
+    text-align: left;
+    font-size: 16px !important;
+    line-height: 38px;
+    white-space: nowrap;
+    text-transform: initial;
+
+    @media (max-width: breakpoint-min('sm')) {
+      white-space: normal;
+      line-height: 22px;
+      padding: 10px 2px 10px 30px;
+    }
+
+    &:hover {
+      transition: background 0.5s;
+      cursor: pointer;
+      color: $primary-color;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    color: #000000;
+
+    &:hover {
+      border-bottom: none !important;
+    }
+  }
+
+}
