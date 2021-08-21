@@ -1,7 +1,7 @@
 mixin header
     - var active = (name) => templateName === name ? 'active' : ''
     - var extractTemplateName = (url) => {if (url === '/') return 'index'; return url ? url.replace('/', '').replace('.html', '') : ''};
-
+    .header__placeholder
     header.header.header-desktop.d-xl-flex
         .header__logo
             a(href=url('/'))
