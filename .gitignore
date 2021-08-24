@@ -7,3 +7,5 @@ gen
 node_modules
 cache
 dev
+
+.DS_Store
