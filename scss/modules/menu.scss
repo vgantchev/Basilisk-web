@@ -1,0 +1,30 @@
+@import "dropdown-menu";
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+  &-item {
+    display: block;
+    margin: 12px 46px 5px;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @media (max-width: breakpoint-min('xl')) {
+      font-size: 24px;
+      line-height: 50px;
+    }
+
+    &-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 10px;
+      transition: color 1s, background 1s;
+    }
+  }
+}

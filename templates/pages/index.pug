@@ -12,9 +12,7 @@ block content
     .container.px-3
         .header-background
         .section-1
-            img.basilisk(src=url('/images/basilisk-banner.png'))
-
-            h4.headline-1=__('supportingTheLongTail')
+            img.basilisk(src=url('/images/new-basilisk-banner.png'))
     .container-wrapper
         .section-2
             .row.section-2-info-box.gx-0
@@ -32,7 +30,20 @@ block content
                     .info-box-wrapper
                         span.ff-sans.info-box-title=__('infobox-title-3')
                         span.info-box-content=__('infobox-content-3')
+    h6.headline-2.hydradx-and-basilisk-title=__('hydradxAndBasilisk')
     .container-wrapper.pos-relative
+        .row.hydradx-and-basilisk-wrapper
+            .col-lg-6.hydradx-and-basilisk-content-wrapper
+                div.hydradx-and-basilisk-text
+                    span
+                        | Basilisk has close ties with
+                        |
+                        a(href='https://hydradx.io/' target='_blank').primary-color-text hydradx.io
+                        |
+                        | - a project in the Polkadot ecosystem which is developing a novel type of multi-asset liquidity pool called the Omnipool.
+            .col-lg-6.hydradx-and-basilisk-img-wrapper
+                span.hydradx-and-basilisk-text Together, Basilisk and HydraDX create a synergy which caters to the varying liquidity needs of cryptoassets throughout their entire lifecycle. Bootstrap liquidity in the early stages using a Basilisk AMM, then move to the HydraDX Omnipool to unlock unprecedented cross-chain liquidity in an ocean of assets.
+    .container-wrapper.pos-relative-mountain
         .container.px-3
             .mountain-logo-slogan
                 h1.mountain-logo-slogan-text=__('mountainLogoSloganText')
@@ -62,11 +73,37 @@ block content
                                     li.listing__item(class=one.what === "WHAT"? 'listing__item--arrow-none':'')=one.what
                             td(class=`${firstTaskClass} ${lastTaskClass}`)
                                 ul.listing.listing__no-style
-                                    li.listing__item(class='')=one.when
-            .headline-3=__('hydradxAndBasilisk')
-            .row.hydradx-and-basilisk-wrapper
-                .col-lg-6.hydradx-and-basilisk-content-wrapper
-                    span.hydradx-and-basilisk-text=__('hydradxAndBasiliskText1')
-                    span.hydradx-and-basilisk-text=__('hydradxAndBasiliskText2')
-                .col-lg-6.hydradx-and-basilisk-img-wrapper
-                    img.hydradx-and-basilisk-img(src=url('images/hydradx-and-basilisk.png'))
+                                    li.listing__item(class=one.when === "WHEN"? 'listing__item--arrow-none':'')=one.when
+    script.
+      const body = document.body;
+      const scrollUp = "scroll-up";
+      const scrollDown = "scroll-down";
+      const headerHeight = document.querySelector('.header__placeholder').offsetHeight;
+      let lastScroll = 0;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= 0) {
+          body.classList.remove(scrollUp);
+          body.classList.remove('scroll');
+          return;
+        }
+
+        if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+          // down
+          body.classList.remove(scrollUp);
+          body.classList.add(scrollDown);
+          if (currentScroll > headerHeight) {
+            body.classList.add('scroll');
+          }
+        } else if (
+          currentScroll < lastScroll &&
+          body.classList.contains(scrollDown)
+        ) {
+          // up
+          body.classList.remove(scrollDown);
+          body.classList.add(scrollUp);
+
+        }
+        lastScroll = currentScroll;
+      });

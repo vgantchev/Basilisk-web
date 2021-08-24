@@ -1,14 +1,45 @@
 mixin header
     - var active = (name) => templateName === name ? 'active' : ''
     - var extractTemplateName = (url) => {if (url === '/') return 'index'; return url ? url.replace('/', '').replace('.html', '') : ''};
-
+    .header__placeholder
     header.header.header-desktop.d-xl-flex
-        a.header__logo(href=url('/'))
-            img(src=url('/images/left-footer-icon.svg'))
+        .header__logo
+            a(href=url('/'))
+                img(src=url('/images/left-footer-icon.svg'))
         ul.header__menu
             each item in header.menu
-                li
+                li.menu-item
                     a(href=url(item.url, locale) class=active(extractTemplateName(item.url)) target=item.target)=__(item.text)
+                    if item.dropdown
+                        ul.dropout-menu
+                            each childItem in item.dropdownItem
+                                a.dropout-menu-link(href=url(childItem.url) target='_blank')
+                                    li.dropout-menu-item=childItem.text
+
+        ul.header__menu-mobile
+            each mobileItem in header.menu
+                if mobileItem.dropdown
+                    li.menu-item
+                        script.
+                          var showHide = function (s) {
+                            if (document.getElementById(s).style.display == 'block') {
+                                document.getElementById(s).style.display = 'none';
+                              } else {
+                                document.getElementById(s).style.display = 'block';
+                            }
+                          }
+                        div.menu-mobile-item(onclick='showHide('+mobileItem.id+')')=__(mobileItem.text)
+                        ul.child-list(id=(mobileItem.id))
+                            a.dropout-menu-link(href=url(mobileItem.url))
+                                if mobileItem.subText
+                                    li.dropout-menu-item=mobileItem.subText
+                            each childMobileItem in mobileItem.dropdownItem
+                                a.dropout-menu-link(href=url(childMobileItem.url) target='_blank')
+                                    li.dropout-menu-item=childMobileItem.text
+                else
+                    li.menu-item
+                        a(href=url(mobileItem.url, locale) class=active(extractTemplateName(mobileItem.url)) target=mobileItem.target)=__(mobileItem.text)
+
         .header__actions
             - var currentLanguage = 'Eng'
             ul.language-menu
@@ -20,10 +51,10 @@ mixin header
                 //li.d-xl-none
                 //    a.back(role='button') Back
 
-            div.language-selector
-                img.language-selector__global(src=url('/images/global.svg'))
-                span.language-selector__current=currentLanguage
-                img.language-selector__arrow-down(src=url('/images/arrow-down.svg'))
+            //div.language-selector
+            //    img.language-selector__global(src=url('/images/global.svg'))
+            //    span.language-selector__current=currentLanguage
+            //    img.language-selector__arrow-down(src=url('/images/arrow-down.svg'))
 
             a.btn.btn-launch-app(href=header.launchAppUrl target='_blank')=__('contribute')
 

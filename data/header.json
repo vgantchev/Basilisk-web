@@ -1,17 +1,72 @@
 {
   "menu": [
     {
-      "text": "ABOUT",
-      "url": "/"
+      "id": 1,
+      "text": "INFO",
+      "url": "/",
+      "dropdown": true,
+      "subText": "Home page",
+      "dropdownItem": [
+        {
+          "url": "https://docs.bsx.fi",
+          "text": "Docs"
+        },
+        {
+          "url": "https://docs.bsx.fi/basilisk_crowdloan",
+          "text": "Crowdloan Details"
+        },
+        {
+          "url": "https://docs.bsx.fi/crowdloan_guide",
+          "text": "Crowdloan Guide"
+        },
+        {
+          "url": "https://docs.bsx.fi/parachains",
+          "text": "Parachains, Auctions and Crowdloans"
+        },
+        {
+          "url": "https://docs.bsx.fi/tokenomics/",
+          "text": "Tokenomics"
+        },
+        {
+          "url": "https://docs.bsx.fi/infra_testnet",
+          "text": "Testnet Deployment"
+        }
+      ]
     },
     {
-      "text": "SUPPORT BASILISK",
-      "url": "/support-basilisk.html"
+      "id": 2,
+      "text": "GITHUB",
+      "url": "https://github.com/galacticcouncil",
+      "target": "_blank",
+      "dropdown": false
     },
     {
-      "text": "DOCS",
-      "url": "https://docs.bsx.fi",
-      "target": "_blank"
+      "id": 3,
+      "text": "GET IN TOUCH",
+      "url": "/#",
+      "target": "_blank",
+      "dropdown": true,
+      "dropdownItem": [
+        {
+          "url": "https://twitter.com/bsx_finance",
+          "text": "Twitter"
+        },
+        {
+          "url": "https://discord.gg/S8YZj5aXR6",
+          "text": "Discord"
+        },
+        {
+          "url": "https://t.me/bsx_fi",
+          "text": "Telegram"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "NEWSLETTER",
+      "url": "https://basiliskfi.substack.com/",
+      "target": "_blank",
+      "dropdown": false
     }
   ],
   "languages": {

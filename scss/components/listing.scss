@@ -37,6 +37,8 @@
 
   &__item--arrow-none {
     color: var(--primray-color);
+    font-size: 24px;
+    line-height: 24px;
     &:before {
       display: none;
     }

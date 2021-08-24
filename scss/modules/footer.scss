@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 6em 2em;
   }
 
   &__inner-mobile {
@@ -44,7 +44,7 @@
   }
 
   .footer-icon {
-    width: 80px;
+    width: 143px;
   }
 
   @media (max-width: breakpoint-min('lg')) {
@@ -64,7 +64,6 @@
   }
 
   @media (max-width: breakpoint-min('sm') - 1px) {
-    margin-top: 8em;
 
     &__logo {
       margin-top: calc(((100% + 2em) * (-84) / 574) - 52px);
