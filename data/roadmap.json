@@ -9,22 +9,26 @@
   },
   {
     "what": "Basilisk LBP",
-    "when": "T+1 week"
+    "when": "T+ weeks"
   },
   {
-    "what": "Enabling LBP functionality for other assets",
-    "when": "T+1.5 week"
+    "what": "Enabling Trading in AMM",
+    "when": "T+ weeks"
   },
   {
     "what": "Liquidity Mining",
-    "when": "T+1.5 months"
-  },
-  {
-    "what": "NFT marketplace",
-    "when": "T+2 months"
+    "when": "T+ weeks"
   },
   {
     "what": "Stablecoin AMM pallet (Curve-like)",
-    "when": "T+3 months"
+    "when": "T+ months"
+  }
+  {
+    "what": "Enabling LBP functionality for other assets",
+    "when": "T+ months"
+  },
+  {
+    "what": "NFT marketplace",
+    "when": "T+ months"
   }
 ]
