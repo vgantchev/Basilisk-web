@@ -65,15 +65,14 @@ block content
             .table-road-map-wrapper
                 table.table.roadmap
                     each one, index in roadmap
+                        - var completedTaskClass = ((one.completed ? 'completed' : ''))
                         - var lastTaskClass = ((index === (roadmap.length - 1)) ? 'task-last' : '');
                         - var firstTaskClass = ((index === 0) ? 'task-first' : '');
                         tr(class=one ? '' : 'p-color')
-                            td(class=`${firstTaskClass} ${lastTaskClass}`)
+                            td(class=`${firstTaskClass} ${lastTaskClass} ${completedTaskClass}`)
                                 ul.listing
                                     li.listing__item(class=one.what === "WHAT"? 'listing__item--arrow-none':'')=one.what
-                            td(class=`${firstTaskClass} ${lastTaskClass}`)
-                                ul.listing.listing__no-style
-                                    li.listing__item(class=one.when === "WHEN"? 'listing__item--arrow-none':'')=one.when
+
     script.
       const body = document.body;
       const scrollUp = "scroll-up";
